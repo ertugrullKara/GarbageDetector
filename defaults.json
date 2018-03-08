@@ -1,0 +1,9 @@
+{
+  "DATA_FOLDERNAME": "data",
+  "CONFIG_FOLDERNAME": "cfg",
+  "TRAINING_DATA_FILENAME": "traininglist.txt",
+  "VALIDATION_DATA_FILENAME": "validationlist.txt",
+  "TEST_DATA_FILENAME": "testlist.txt",
+  "CLASS_INDEX_FILENAME": "classindex.txt",
+  "CONFIG_FILENAME": "tiny_yolo_config.json"
+}

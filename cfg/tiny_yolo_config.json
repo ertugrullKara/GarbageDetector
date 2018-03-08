@@ -1,0 +1,165 @@
+{
+  "net": {
+    "feature_extractor_weights": "tiny_yolo_features.h5",
+    "best_model_weights": "yolo_trained.h5",
+    "input_size": 416,
+    "train_times": 5,
+    "valid_times": 1,
+    "batch": 8,
+    "nb_epoch": 1001,
+    "width": 416,
+    "height": 416,
+    "channels": 3,
+    "momentum": 0.9,
+    "decay": 0.0005,
+    "learning_rate": 0.001,
+    "connection_orders": [
+      "convolution_0",
+      "maxpool_0",
+      "convolution_1",
+      "maxpool_1",
+      "convolution_2",
+      "maxpool_2",
+      "convolution_3",
+      "maxpool_3",
+      "convolution_4",
+      "maxpool_4",
+      "convolution_5",
+      "maxpool_5",
+      "convolution_6",
+      "convolution_7",
+      "region"
+    ]
+  },
+  "connections": [
+    {
+      "convolution_0": {
+        "batch_normalize": 1,
+        "filters": 16,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_0": {
+        "size": 2,
+        "stride": 2
+      },
+      "convolution_1": {
+        "batch_normalize": 1,
+        "filters": 32,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_1": {
+        "size": 2,
+        "stride": 2
+      },
+      "convolution_2": {
+        "batch_normalize": 1,
+        "filters": 64,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_2": {
+        "size": 2,
+        "stride": 2
+      },
+      "convolution_3": {
+        "batch_normalize": 1,
+        "filters": 128,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_3": {
+        "size": 2,
+        "stride": 2
+      },
+      "convolution_4": {
+        "batch_normalize": 1,
+        "filters": 256,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_4": {
+        "size": 2,
+        "stride": 2
+      },
+      "convolution_5": {
+        "batch_normalize": 1,
+        "filters": 512,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "maxpool_5": {
+        "size": 2,
+        "stride": 1
+      },
+      "convolution_6": {
+        "batch_normalize": 1,
+        "filters": 1024,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "convolution_7": {
+        "batch_normalize": 1,
+        "filters": 1024,
+        "size": 3,
+        "stride": 1,
+        "pad": 1,
+        "activation": "leaky"
+      },
+      "convolution_8": {
+        "batch_normalize": 1,
+        "filters": 81,
+        "size": 1,
+        "stride": 1,
+        "pad": 1,
+        "activation": "linear"
+      },
+      "region": {
+        "anchors": [
+          0.79,
+          2.56,
+          1.13,
+          1.34,
+          1.25,
+          2.37,
+          1.68,
+          1.65,
+          2.16,
+          0.92,
+          2.17,
+          1.37,
+          2.58,
+          1.69,
+          2.74,
+          0.74,
+          2.88,
+          1.20
+        ],
+        "coords": 4,
+        "num": 9,
+        "jitter": 0.6,
+        "warmup_bs": 12800,
+        "object_scale": 5,
+        "noobject_scale": 1,
+        "class_scale": 1,
+        "coord_scale": 2,
+        "threshold": 0.3
+      }
+    }
+  ]
+}
