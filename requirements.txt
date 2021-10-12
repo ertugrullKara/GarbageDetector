@@ -2,6 +2,6 @@ imgaug==0.2.5
 tensorflow-gpu==1.4.0
 simplejson==3.12.0
 numpy==1.13.3
-opencv_python==3.3.0.10
+opencv_python==4.2.0.32
 Pillow==4.3.0
 h5py==2.7.1
