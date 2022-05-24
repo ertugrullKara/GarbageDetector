@@ -1,5 +1,5 @@
 imgaug==0.2.5
-tensorflow-gpu==1.4.0
+tensorflow-gpu==2.6.4
 simplejson==3.12.0
 numpy==1.13.3
 opencv_python==3.3.0.10
